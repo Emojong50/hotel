@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .table-responsive::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.overlay{
+  position: absolute;
+  top:10% ;
+  left: 20%;
+}
+#close{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 80%;
+}
+
+</style>
+<title>Title</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@johndoe</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>@janedoe</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>@janedoe</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>@janedoe</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>@janedoe</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>@janedoe</td>
+              </tr>
+              <tr>
+                <td colspan="4"><button id="order" class="btn btn-primary btn-block">order here</button></td>
+              </tr>
+              <!-- more rows -->
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div  class="overlay  col-sm-4" id="overlay" >
+        <table class="table bg-dark" style="color:white">
+          <tr>
+            <th colspan="4">order placement</th>
+            <th colspan="1"><button id="close" style="color: white;background-color: red;">x</button></th>
+          </tr>
+          <tr>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam est expedita, veniam, ea iure sit provident quo itaque porro tempore eos nostrum! Aut culpa quaerat incidunt quam aliquid error provident?</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam est expedita, veniam, ea iure sit provident quo itaque porro tempore eos nostrum! Aut culpa quaerat incidunt quam aliquid error provident?</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam est expedita, veniam, ea iure sit provident quo itaque porro tempore eos nostrum! Aut culpa quaerat incidunt quam aliquid error provident?</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam est expedita, veniam, ea iure sit provident quo itaque porro tempore eos nostrum! Aut culpa quaerat incidunt quam aliquid error provident?</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam est expedita, veniam, ea iure sit provident quo itaque porro tempore eos nostrum! Aut culpa quaerat incidunt quam aliquid error provident?</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+  $("#order").on("click", function(){
+    
+    $("#overlay").fadeIn(1000);
+    $("#overlay").prop('hidden', false);
+    
+    
+  });
+  $("#close").on("click", function(){
+    $("#overlay").fadeOut(1000, function(){
+      $("#overlay").prop('hidden', true);
+    });
+    
+    
+  });
+
+</script>
+</body>
+</html>

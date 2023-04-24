@@ -1,0 +1,19 @@
+.product{
+    columns: 2;
+    
+}
+hr{
+    background-color:yellow;
+}
+img{
+    width:100px;
+    height: 100px;
+}
+#brand{
+    color: rgb(52, 26, 165);
+    background-image: linear-gradient(to left, green, rgb(32, 228, 179));
+    background-clip: text;
+    font-size: 20px;
+    font-weight: 900;
+    
+}
